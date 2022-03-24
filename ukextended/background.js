@@ -15,7 +15,18 @@ limitations under the License.
 */
 var previousCharIsMagic = false;
 var contextID = -1;
-var lut = {"a": "à", "A": "À", "e": "è", "E": "È", "i": "ì", "I":"Ì", "o": "ò", "O":"Ò", "u":"ù", "U":"Ù", "w":"ẁ", "W":"Ẁ", "y":"ỳ", "Y":"Ỳ", "`": "`"};
+var lut = {
+"KeyA": [ "a", "á", "ã" ]
+"KeyE": [ "e", "é ]
+"KeyI": [ "i", "í" ]
+"KeyO": [ "o", "ø," "õ" ]
+"KeyU": [ "u", "ú" ]
+"KeyC": [ "c", "c̥", "ç" ]
+"KeyS": [ "s", "s̥", "ş" ]
+"KeyZ": [ "z", "z̥", "z" ] 
+"KeyN": [ "n", "ñ" ]
+"KeyR:" [ "r", "r̥" ]
+};
 
 chrome.input.ime.onFocus.addListener(function(context) {
   contextID = context.contextID;

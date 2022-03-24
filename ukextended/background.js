@@ -15,18 +15,7 @@ limitations under the License.
 */
 var previousCharIsMagic = false;
 var contextID = -1;
-var lut = {
-"KeyA": [ "a", "á", "ã" ]
-"KeyE": [ "e", "é" ]
-"KeyI": [ "i", "í" ]
-"KeyO": [ "o", "ø," "õ" ]
-"KeyU": [ "u", "ú" ]
-"KeyC": [ "c", "c̥", "ç" ]
-"KeyS": [ "s", "s̥", "ş" ]
-"KeyZ": [ "z", "z̥", "z" ] 
-"KeyN": [ "n", "ñ" ]
-"KeyR:" [ "r", "r̥" ]
-};
+var lut = { };
 
 chrome.input.ime.onFocus.addListener(function(context) {
   contextID = context.contextID;
@@ -48,11 +37,11 @@ chrome.input.ime.onKeyEvent.addListener(
           handled = true;
         } else {
           chrome.input.ime.commitText({"contextID": contextID,
-                                   "text": "`"});
+                                   "text": "̥"});
         }
       }
       
-      if (!handled && keyData.type == "keydown" && keyData.code == "Backquote" && keyData.key =="`") {
+      if (!handled && keyData.type == "keydown" && keyData.code == "Backquote" && keyData.key =="̥") {
         previousCharIsMagic = true;
         handled = true;
       }

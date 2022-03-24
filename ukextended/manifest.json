@@ -14,10 +14,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 {
-  "name": "UK extended",
-  "version": "1.1",
+  "name": "VSK",
+  "version": "1",
   "manifest_version": 2,
-  "description": "UK extended keyboard (backquote acting as a dead key for grave accent)",
+  "description": "VSK",
   "background": {
     "scripts": ["background.js"]
   },
@@ -26,11 +26,11 @@ limitations under the License.
   ],
   "input_components": [
     {
-      "name": "UK extended",
+      "name": "VSK",
       "type": "ime",
-      "id": "uk_extended_ime",
+      "id": "vsk_ime",
       "description": "UK extended keyboard (backquote acting as a dead key for grave accent",  // user visible description
-      "language": "en-GB",  // The primary language this IME is used for
+      "language": "vsk",  // The primary language this IME is used for
       "layouts": ["gb(extd)"]  // The supported keyboard layouts for this IME (gb(extd) is actually a plain UK keyboard)
     }
   ]

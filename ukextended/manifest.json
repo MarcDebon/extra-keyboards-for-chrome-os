@@ -16,7 +16,7 @@ limitations under the License.
 {
   "name": "VSK",
   "version": "1",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "description": "VSK",
   "background": {
     "scripts": ["background.js"]

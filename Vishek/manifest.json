@@ -1,1 +1,23 @@
+{
+  "name": "Vishek",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Vishek keyboard",
+  "background": {
+    "scripts": ["background.js"]
+  },
 
+  "permissions": [
+    "input"
+  ],
+  "input_components": [
+    {
+      "name": "Lushootseed",
+      "type": "ime",
+      "id": "lushootseed",
+      "description": "Vishek keyboard",
+      "language": "en-US",
+      "layouts": ["us"]
+    }
+  ]
+}

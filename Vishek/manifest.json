@@ -12,9 +12,9 @@
   ],
   "input_components": [
     {
-      "name": "Lushootseed",
+      "name": "Vishek",
       "type": "ime",
-      "id": "lushootseed",
+      "id": "vishek",
       "description": "Vishek keyboard",
       "language": "en-US",
       "layouts": ["us"]

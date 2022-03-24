@@ -17,33 +17,33 @@ limitations under the License.
 var contextID = 0;
 
 var lut = {
-  "KeyQ": [ "q", "q̓" ],
-  "KeyW": [ "w", "w̓" ],
-  "KeyE": [ "ə", "q̓ʷ" ],
-  "KeyR": [ "š", "√" ],
-  "KeyT": [ "t", "t̕" ],
-  "KeyY": [ "y", "y̓" ],
-  "KeyU": [ "u", null ],
-  "KeyI": [ "i", "kʷ" ],
-  "KeyO": [ "ʷ", null ],
-  "KeyP": [ "p", "p̓" ],
-  "KeyA": [ "a", "qʷ" ],
-  "KeyS": [ "s", "S" ],
-  "KeyD": [ "d", "dᶻ" ],
-  "KeyF": [ "ʔ", null ],
-  "KeyG": [ "g", "gʷ" ],
-  "KeyH": [ "h", null ],
-  "KeyJ": [ "ǰ", "k̓ʷ" ],
-  "KeyK": [ "k", "k̓" ],
-  "KeyL": [ "l", "l̕" ],
+  "KeyQ": [ "q", "q" ],
+  "KeyW": [ "w", "w" ],
+  "KeyE": [ "e", "ẽ" ],
+  "KeyR": [ "r", "r̥" ],
+  "KeyT": [ "t", "t" ],
+  "KeyY": [ "y", "ỹ" ],
+  "KeyU": [ "u", "ũ" ],
+  "KeyI": [ "i", "ĩ" ],
+  "KeyO": [ "o", "õ" ],
+  "KeyP": [ "p", "p" ],
+  "KeyA": [ "a", "ã" ],
+  "KeyS": [ "s", "s̥" ],
+  "KeyD": [ "d", "d" ],
+  "KeyF": [ "f", "f" ],
+  "KeyG": [ "g", "g" ],
+  "KeyH": [ "h", "h" ],
+  "KeyJ": [ "j", "j" ],
+  "KeyK": [ "k", "k" ],
+  "KeyL": [ "l", "l" ],
   "Semicolon": [ "ɬ", "ƛ̕" ],
-  "KeyZ": [ "x̌", "x̌ʷ" ],
-  "KeyX": [ "x", "xʷ" ],
-  "KeyC": [ "c", "c̓" ],
-  "KeyV": [ "č", "č̓" ],
-  "KeyB": [ "b", "b̓" ],
-  "KeyN": [ "n", "n̓" ],
-  "KeyM": [ "m", "m̓" ],
+  "KeyZ": [ "z", "z̥" ],
+  "KeyX": [ "x", "x" ],
+  "KeyC": [ "c", "c̥" ],
+  "KeyV": [ "v", "v" ],
+  "KeyB": [ "b", "b" ],
+  "KeyN": [ "n", "ñ" ],
+  "KeyM": [ "m", "m̃" ],
 };
     
 
@@ -66,7 +66,7 @@ chrome.input.ime.onKeyEvent.addListener(
       
       if (keyData.type == "keydown") {
         if (lut[keyData.code]) {
-          let shifted = keyData.capsLock ^ keyData.shiftKey;
+          let shifted = keyData.shiftKey ^ keyData.altKey;
           let emit = lut[keyData.code][shifted];
 
           if (emit != null && contextID != 0) {

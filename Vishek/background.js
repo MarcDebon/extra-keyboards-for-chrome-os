@@ -33,7 +33,7 @@ var lut = {
   "KeyJ": [ "j", "j" ],
   "KeyK": [ "k", "k" ],
   "KeyL": [ "l", "l" ],
-  "Semicolon": [ "ɬ", "ƛ̕" ],
+  "Semicolon": [ "ɬ", "ɬ" ],
   "KeyZ": [ "z", "z̥" ],
   "KeyX": [ "x", "x" ],
   "KeyC": [ "c", "c̥" ],
@@ -63,7 +63,7 @@ chrome.input.ime.onKeyEvent.addListener(
       
       if (keyData.type == "keydown") {
         if (lut[keyData.code]) {
-          let shifted = keyData.shiftKey ^ keyData.altKey;
+          let shifted = keyData.altKey ^ keyData.altKey;
           let emit = lut[keyData.code][shifted];
 
           if (emit != null && contextID != 0) {

@@ -17,7 +17,7 @@ var previousCharIsMagic = false;
 var contextID = -1;
 var lut = {
 "KeyA": [ "a", "á", "ã" ]
-"KeyE": [ "e", "é ]
+"KeyE": [ "e", "é" ]
 "KeyI": [ "i", "í" ]
 "KeyO": [ "o", "ø," "õ" ]
 "KeyU": [ "u", "ú" ]

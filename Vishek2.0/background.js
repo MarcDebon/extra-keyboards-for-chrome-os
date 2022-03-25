@@ -33,7 +33,6 @@ var lut = {
   "KeyJ": [ "j", "j" ],
   "KeyK": [ "k", "k" ],
   "KeyL": [ "l", "ɬ" ],
-  "Semicolon": [ ";", ":" ],
   "KeyZ": [ "z", "z̥" ],
   "KeyX": [ "x", "x" ],
   "KeyC": [ "c", "c̥" ],
